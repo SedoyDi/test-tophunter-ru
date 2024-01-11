@@ -1,0 +1,13 @@
+.footer-link {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+.footer-link_img {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
