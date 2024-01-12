@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Card.css";
+import plug from "../../../images/plug.svg";
+import favIconR from "../../../images/favorite_r.svg";
+import favIconW from "../../../images/favorite_w.svg";
 
-export default function Card(props) {
+export default function Card({ data }) {
+    const [isFav, setIsFav] = useState(false);
+    const [isStore, setIsStore] = useState(false);
+    const picture = data.picture ? data.picture : plug;
+    const favIcon = isFav ? favIconR : favIconW;
     return (
         <li className='card'>
-            <h2 className='card__title'>{props.name}</h2>
-            <img className='card__img' src={props.picture} alt="фото" />
             <div className='card__container'>
-                <span className='card__price' >{props.price}</span>
-                <button type='button' className='card__button_add_shopping-cart'>В корзину</button>
+                <h2 className='card__title'>{data.name}</h2>
+                <button type='button' className='card__button_add_favourites' onClick={() => setIsFav(!isFav)}>
+                    <img src={favIcon} alt='icon' />
+                </button>
             </div>
-            <button type='button' className='card__button_add_favourites' />
+            <img className='card__img' src={picture} alt="фото" />
+            <div className='card__container'>
+                <span className='card__price' >{data.price} &#8381;</span>
+                <button type='button' className='card__button_add_shopping-cart' onClick={() => setIsStore(!isStore)} >В корзину</button>
+            </div>
+
         </li>
     )
 }
