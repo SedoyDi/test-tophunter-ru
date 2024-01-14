@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+### тестовое приложение <u>test-tophunter-ru</u>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Т.З 
 
-## Available Scripts
+Сверстать 3 страницы с использованием библиотеки React. Использование хуков обязательно. Настроить роутинг между ними, подключить redux. В верстке использовать html5. Допустимо использование SASS. Дизайн страниц произвольный. Допустимо использование сторонних UI библиотек.
 
-In the project directory, you can run:
+1.	Страница с товарами.
+2.	Страница избранное.
+3.	Страница корзина.
 
-### `npm start`
+	На странице с товарами вывести список товаров (http://react.ohotaktiv.ru:5000/goods, требуется посредством API забрать эти товары) с кнопками «В корзину» и «В избранное». Если товар есть в корзине или в избранном, на карточке товара кнопки должны меняться на «В корзине» или «В избранном» и кнопки должны стать неактивными. Если товара нет в наличии, то показываем неактивную кнопку «Отсутствует». Если у товара нет картинки, поставить любую заглушку.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+	Вся логика должна храниться в Redux.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+	На странице с Избранным и с Корзиной должны быть товары, добавленные со страницы с товарами. Должны быть кнопки «Удалить из корзины» и «Удалить из избранного». Предусмотреть посещение страницы без добавленных товаров (Нет товаров в избранном, нет товаров в корзине).
 
-### `npm test`
+## коментарии 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. забрать список товаров с ресурса http://react.ohotaktiv.ru:5000/goods по средствам "fetch" запроса не удалось.
+>Access to fetch at 'http://react.ohotaktiv.ru:5000/goods' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+>GET http://react.ohotaktiv.ru:5000/goods net::ERR_FAILED 200 (OK)
+*С HTTP (без S) это дело работать не будет. Без SSL сейчас практически ничего не работает.*

@@ -2,17 +2,21 @@ import React from 'react';
 import "./Main.css";
 import Card from './card/Card';
 
-export default function Main({ cards, handleAddFav, handleAddStore }) {
+export default function Main({ cards, hendlerFav, hendlerShoppingCart }) {
+
+
     return (
         <main className='main'>
             <ul className='main__card-list'>
-                {cards.map((card) => {
-                    const _id = Math.random().toString(16).slice(2)
-                    card = { ...card, _id: _id }
-                    return <Card
-                        key={card._id}
-                        data={card} />
-                })}
+                {cards.length === 0 ?
+                    <h2> Ничего не добавлено </h2> :
+                    cards.map((card) => {
+                        return <Card
+                            key={card.id}
+                            data={card}
+                            hendlerFav={hendlerFav}
+                            hendlerShoppingCart={hendlerShoppingCart} />
+                    })}
             </ul>
         </main>
     )
