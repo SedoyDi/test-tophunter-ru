@@ -3,8 +3,6 @@ import "./Main.css";
 import Card from './card/Card';
 
 export default function Main({ cards, hendlerFav, hendlerShoppingCart }) {
-
-
     return (
         <main className='main'>
             <ul className='main__card-list'>

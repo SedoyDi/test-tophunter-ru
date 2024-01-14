@@ -13,34 +13,36 @@ function App() {
   function _addId(arr) {
     return arr.map((el) => {
       const _id = Math.random().toString(16).slice(2)
-      return el = { ...el, id: _id, fav: false, shoppingCart: false }
+      return el = { ...el, id: _id }
     })
   }
 
-  function hendlerFav(card) {
-    let resArr = favCards;
+  function _addAndDelCard(card, arr) {
+    let resArr = arr;
     if (!resArr.find(el => el.id === card.id)) {
       resArr = [...resArr, card]
     } else {
       resArr = resArr.filter(el => el.id !== card.id);
     };
-    setFavCards(resArr);
+    return resArr;
+  }
+
+  function hendlerFav(card) {
+    setFavCards(_addAndDelCard(card, favCards));
   };
 
   function hendlerShoppingCart(card) {
-    let resArr = shoppingCartCards;
-    if (!resArr.find(el => el.id === card.id)) {
-      resArr = [...resArr, card]
-    } else {
-      resArr = resArr.filter(el => el.id !== card.id);
-    };
-    setShoppingCartCards(resArr);
+    setShoppingCartCards(_addAndDelCard(card, shoppingCartCards));
   };
 
   useEffect(() => {
-    fetch('http://react.ohotaktiv.ru:5000/goods', { mods: 'no-cors' })
-      .then(async response => console.log(await response.json()))
-      .catch(error => console.log('Error:', error));
+    //fetch('http://react.ohotaktiv.ru:5000/goods', { mods: 'no-cors' })
+    // .then(async (response) => {
+    //const arr = response.json()
+    //setIsResArr(_addId(arr));
+    //})
+    //.catch(error => console.log('Error:', error));
+
   }, [])
 
   useEffect(() => {

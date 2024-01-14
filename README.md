@@ -16,7 +16,13 @@
 
 ## коментарии 
 
-1. забрать список товаров с ресурса http://react.ohotaktiv.ru:5000/goods по средствам "fetch" запроса не удалось.
+1. забрать список товаров с ресурса http://react.ohotaktiv.ru:5000/goods по средствам "fetch" запроса не удалось. (пришлось хардкодить)
+
 >Access to fetch at 'http://react.ohotaktiv.ru:5000/goods' from origin 'http://localhost:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+
 >GET http://react.ohotaktiv.ru:5000/goods net::ERR_FAILED 200 (OK)
+
 *С HTTP (без S) это дело работать не будет. Без SSL сейчас практически ничего не работает.*
+
+2. c Redux не работал ранее, в описании к вакансии этих требований к соискателю не выдвигалось. Готов выучить при положительном ответе.
+
