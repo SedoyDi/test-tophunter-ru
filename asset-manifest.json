@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/test-tophunter-ru/static/css/main.6947b20a.css",
+    "main.js": "/test-tophunter-ru/static/js/main.90e87878.js",
+    "static/media/plug.svg": "/test-tophunter-ru/static/media/plug.c789d469e59581bc92ae0242d49c9018.svg",
+    "static/media/favorite_r.svg": "/test-tophunter-ru/static/media/favorite_r.a7062c67c85fb72c8007524959608050.svg",
+    "static/media/favorite_w.svg": "/test-tophunter-ru/static/media/favorite_w.3f7b6e1166f42bd6965f2725c0ff42c4.svg",
+    "static/media/vk_icon.svg": "/test-tophunter-ru/static/media/vk_icon.4d997d246d42e713346a6f432db048da.svg",
+    "index.html": "/test-tophunter-ru/index.html",
+    "static/media/youtube_icon.svg": "/test-tophunter-ru/static/media/youtube_icon.f31ef1ff1effe0aec01fa7e4aa3193fb.svg",
+    "static/media/telegram_icon.svg": "/test-tophunter-ru/static/media/telegram_icon.7fd563d86088460a58d59f7bb02e9ccc.svg",
+    "static/media/mail_icon.svg": "/test-tophunter-ru/static/media/mail_icon.de715a1660e6cb33ab7ac551307a0c4e.svg",
+    "main.6947b20a.css.map": "/test-tophunter-ru/static/css/main.6947b20a.css.map",
+    "main.90e87878.js.map": "/test-tophunter-ru/static/js/main.90e87878.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6947b20a.css",
+    "static/js/main.90e87878.js"
+  ]
+}
